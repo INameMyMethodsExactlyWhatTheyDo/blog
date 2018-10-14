@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block header %}
+<div class="topnav">
+        <a class="active" href="/">Home</a>
+        <a href="/all">All post</a>
+        <a href="/write">Write Post</a>
+        <a href="/login">Login</a>
+        <a href="/about">About</a>
+</div>
+{% endblock header %}
+
+{% block content %}
+
+    {% for post in posts %}
+        <h1>{{ post.title }}</h1>
+        <p>By {{ post.author }} on {{ post.date_posted }}</p>
+        <p>{{ post.content }}</p>
+    {% endfor %}
+
+{% endblock content %}

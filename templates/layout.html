@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% if title %}
+            <title>Page Blog - {{title}}</title>
+        {% else %}
+            <title>Page Title</title>
+        {% endif %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    </head>
+<body>
+
+    {% block header %} {% endblock%}
+
+    <div id='posts'>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
