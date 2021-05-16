@@ -11,6 +11,7 @@ pipeline {
         stage('Funny joke') { 
             steps {
                 sh 'echo "taco about my feelings!!!!"' 
+                sh 'echo "meow mix"' 
             }
         }
 
